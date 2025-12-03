@@ -107,13 +107,19 @@ sudo apt-get install gitk git-gui
 ````
 ## Branching e Commiting
 ````
+git checkout master
+````
+Para criar um branch chamado ardupilot_git_tutorial:
+````
+git checkout -b ardupilot_git_tutorial
+````
+Abra o arquivo Tools/GIT_Test/GIT_Success.txt e escreva seu nome no final e salve. Então:
+````
+git status
+````
+Você poderá ver o arquivo modificado
+````
 
-````
-````
-````
-````
-````
-````
 ````
 ````
 ````
