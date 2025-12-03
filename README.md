@@ -101,8 +101,13 @@ ros2 run demo_nodes_py listener
 ````
 # Instalando Ardupilot
 ````
+sudo apt-get update
+sudo apt-get install git
+sudo apt-get install gitk git-gui
 ````
+## Branching e Commiting
 ````
+
 ````
 ````
 ````
