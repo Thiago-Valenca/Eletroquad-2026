@@ -167,12 +167,21 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-
 sudo apt-get update
 sudo apt-get install gz-harmonic
 ````
+# Configurando ROS2 para o Ardupilot
+## Configurando ROS2
+Para sempre ter acesso aos comandos do ROS2:
 ````
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
 ````
+Para ver o setup atual do ROS2:
 ````
+printenv | grep -i ROS
 ````
+## Ardupilot Workspace
 ````
-````
+mkdir -p ~/ardu_ws/src
+pip install --upgrade setuptools[core]
+vcs import --recursive --input  https://raw.githubusercontent.com/ArduPilot/ardupilot/master/Tools/ros2/ros2.repos src
 ````
 ````
 ````
