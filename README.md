@@ -201,11 +201,22 @@ cd Micro-XRCE-DDS-Gen
 echo "export PATH=\$PATH:$PWD/scripts" >> ~/.bashrc
 ````
 ````
+source ~/.bashrc
+microxrceddsgen -help
 ````
 ````
+cd ~/ardu_ws
+colcon build --packages-up-to ardupilot_dds_tests
 ````
+Se a build falhar:
 ````
+colcon build --packages-up-to ardupilot_dds_tests --event-handlers=console_cohesion+
 ````
+Para testar a instalação:
 ````
+cd ~/ardu_ws
+source ./install/setup.bash
+colcon test --executor sequential --parallel-workers 0 --base-paths src/ardupilot --event-handlers=console_cohesion+
+colcon test-result --all --verbose
 ````
 ````
